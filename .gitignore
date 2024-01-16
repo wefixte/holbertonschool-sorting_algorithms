@@ -2,6 +2,8 @@
 !*.*
 # Unignore all dirs
 !*/
+
 /.devcontainer
 .vscode
 *.d
+*main.c
