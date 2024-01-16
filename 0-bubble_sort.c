@@ -15,13 +15,13 @@ void bubble_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	/* loop through array */
-	for (index = 0; index < size; index++)
+	/* loop through array multiple times */
+	for (index = 0; index < size - 1; index++)
 	{
 		turn = 0;
 
-		/* loop through array */
-		for (index2 = 0; index2 < size - 1; index2++)
+		/* Compare the elements next to each other */
+		for (index2 = 0; index2 < size - index - 1; index2++)
 		{
 			/* check if current element is greater than next element */
 			if (array[index2] > array[index2 + 1])
@@ -33,7 +33,7 @@ void bubble_sort(int *array, size_t size)
 
 				/* print array */
 				print_array(array, size);
-				turn = 1;
+				turn = 1; /* indicate if change was made */
 			}
 		}
 		/* check if array is sorted */
