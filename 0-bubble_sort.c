@@ -8,7 +8,7 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	int tempo = 0;
+	int tempo, turn;
 	size_t index, index2;
 
 	/* check if array is NULL or size is less than 2 */
@@ -18,6 +18,8 @@ void bubble_sort(int *array, size_t size)
 	/* loop through array */
 	for (index = 0; index < size; index++)
 	{
+		turn = 0;
+
 		/* loop through array */
 		for (index2 = 0; index2 < size - 1; index2++)
 		{
@@ -28,11 +30,14 @@ void bubble_sort(int *array, size_t size)
 				tempo = array[index2];
 				array[index2] = array[index2 + 1];
 				array[index2 + 1] = tempo;
+
 				/* print array */
 				print_array(array, size);
+				turn = 1;
 			}
 		}
-		if (index == size - 1)
+		/* check if array is sorted */
+		if (turn == 0)
 			break;
 	}
 }
