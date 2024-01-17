@@ -16,12 +16,12 @@ void bubble_sort(int *array, size_t size)
 		return;
 
 	/* loop through array multiple times */
-	for (index = 0; index < size; index++)
+	for (index = 0; index < size - 1; index++)
 	{
 		turn = 0;
 
 		/* Loop to compare the elements next to each other */
-		for (index2 = 0; index2 < size - 1; index2++)
+		for (index2 = 0; index2 < size - index - 1; index2++)
 		{
 			/* check if current element is greater than next element */
 			if (array[index2] > array[index2 + 1])
