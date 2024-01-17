@@ -32,8 +32,8 @@ void bubble_sort(int *array, size_t size)
 				array[index2 + 1] = tempo;
 
 				/* print array */
-				print_array(array, size);
 				turn = 1; /* indicate if change was made */
+				print_array(array, size);
 			}
 		}
 		/* check if array is sorted */
